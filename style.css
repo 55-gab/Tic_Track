@@ -1,0 +1,1268 @@
+/* Estilos para la pantalla de inicio */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Sin scroll */
+  font-family: Arial, sans-serif;
+}
+
+.inicio-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('FondoPaginaInicio/fondo.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.titulo-img {
+  position: absolute;
+  top: 20px;
+  right: 190px;
+  max-width: 300px;
+  height: auto;
+}
+
+.contenedor {
+  position: relative; /* Importante */
+}
+
+.texto-box {
+  position: absolute;
+  top: 50px;
+  right: -40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 690px;
+  display: block;
+}
+
+.texto-contenido{
+  position: absolute;
+  top: 250px; /* puedes cambiar esto */
+  left: -340px;
+  transform: translate(-50%, -50%); /* centra perfectamente */
+  z-index: 10; /* asegura que quede encima */
+  color: #000000;
+}
+
+.texto-contenido h1,
+.texto-contenido p {
+  margin: 50px 40; /* separa un poco las líneas */
+}
+
+.boton-img {
+  cursor: pointer;
+  position: absolute;
+  top: 350px; /* puedes cambiar esto */
+  right: 150px;
+  width: 400px;
+  height: auto;
+  animation: latido 2s infinite ease-in-out;
+}
+
+@keyframes latido {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.carros1-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 700px;
+  height: auto;
+}
+
+.fade-out {
+  animation: fadeOut 60s forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; visibility: hidden; }
+}
+.segunda-seccion {
+  display: block; /* en lugar de none solo para TEST */
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('pagina2/fondo2.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Imagen del título 2 */
+.titulo2-img {
+  position: absolute;
+  top: -220px;      
+  left: 50%;      
+  transform: translateX(-50%);
+  width: 500px;
+  height: auto;
+}
+
+.queesboton-img {
+  position: absolute;
+  top: 280px;
+  left: 500px;
+  width: 300px;
+  height: auto;
+}
+/* 🎯 BOTÓN: Calendario */
+.calendarioboton-img {
+  position: absolute;
+  top: 280px;
+  left: 150px;
+  width: 300px;
+  height: auto;
+}
+
+/* 🎯 BOTÓN: Noticias */
+.noticiasboton-img {
+  position: absolute;
+  top: 110px;
+  left: 870px;
+  width: 300px;
+  height: auto;
+}
+
+/* 🎯 BOTÓN: Términos */
+.terminosboton-img {
+  position: absolute;
+  top: 280px;
+  left: 870px;
+  width: 300px;
+  height: auto;
+}
+
+/* 🎯 BOTÓN: Trivia */
+.triviaboton-img {
+  position: absolute;
+  top: 110px;
+  left: 150px;
+  width: 300px;
+  height: auto;
+}
+
+
+.comoentrarboton-img {
+  position: absolute;
+  top: 110px;
+  left: 500px;
+  width: 300px;
+  height: auto;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* Hover (cuando el mouse pasa encima) */
+.btn:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Click (efecto hundido) */
+.btn:active {
+  transform: scale(0.95);
+  filter: brightness(0.8);
+}
+
+.bandera-img {
+  position: absolute;
+  top: 360px;
+  left: 520px;
+  width: 300px;
+  height: auto;
+  rotate: 90deg;
+}
+.bandera1-img {
+  position: absolute;
+  top: 360px;
+  left: 70px;
+  width: 300px;
+  height: auto;
+  rotate: 90deg;
+}
+.bandera2-img {
+  position: absolute;
+  top: 360px;
+  left: 950px;
+  width: 300px;
+  height: auto;
+  rotate: 90deg;
+}
+
+.carroS-img {
+  position: absolute;
+  top: 0px;
+  right: -80px;
+  width: 300px;
+  height: auto;
+}
+.carrow-img {
+  position: absolute;
+  top: 390px;
+  left: 640px;
+  width: 300px;
+  height: auto;
+}
+.estrella-img {
+  position: absolute;
+  top: 300px;
+  left: 1100px;
+  width: 300px;
+  height: auto;
+}
+.estrella2-img {
+  position: absolute;
+  top: 300px;
+  left: 0px;
+  width: 300px;
+  height: auto;
+}
+.pista-img {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 300px;
+  height: auto;
+  rotate: 10deg;
+}
+.pista2-img {
+  position: absolute;
+  top: 200px;
+  right: 200px;
+  width: 300px;
+  height: auto;
+  rotate: 10deg;
+}
+.pista3-img {
+  position: absolute;
+  top: 400px;
+  right: 440px;
+  width: 300px;
+  height: auto;
+  rotate: 15deg;
+}
+.ruedaamarilla-img {
+  position: absolute;
+  top: 0px;
+  left: 900px;
+  width: 100px;
+  height: auto;
+}
+.ruedablanca-img {
+  position: absolute;
+  top: 0px;
+  left: 270px;
+  width: 100px;
+  height: auto;
+}
+/* ---------------------------
+   Reglas añadidas para secciones + glitch
+   --------------------------- */
+
+/* clase general para secciones (solo una visible) */
+.seccion {
+  display: none; /* ocultas por defecto; JS controlará la visibilidad */
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* la sección visible */
+.seccion.active {
+  display: block;
+  animation: appear 300ms ease-out;
+}
+
+/* pequeño fade-in cuando aparece la sección (suave) */
+@keyframes appear {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* contenido interno (ajusta paddings si quieres) */
+.contenido-seccion {
+  position: relative;
+  z-index: 10;
+}
+
+/* volver-btn (imagen) */
+.volver-btn {
+  position: absolute;
+  top: 10px;
+  left: 1050px;
+  width: 200px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.18s ease, filter 0.18s ease;
+  z-index: 30;
+}
+
+.volver-btn:hover { transform: translateY(-6px) scale(1.03); }
+
+header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1300px;
+  height: 100px;
+    background-color: #8d322f;
+    color: #fcf790;
+    text-align: center;
+    padding: 10px;
+}
+
+.h1884-img {
+  position: absolute;
+  top: 1000px;
+  left: 0px;
+  width: 300px;
+  height: auto;
+}
+.h1900-img {
+  position: absolute;
+  top: 1000px;
+  left: 320px;
+  width: 300px;
+  height: auto;
+}
+.h1901-img {
+  position: absolute;
+  top: 1000px;
+  left: 640px;
+  width: 300px;
+  height: auto;
+}
+.h1904-img {
+  position: absolute;
+  top: 1000px;
+  left: 960px;
+  width: 300px;
+  height: auto;
+}
+.h1906-img {
+  position: absolute;
+  top: 1400px;
+  left: 960px;
+  width: 300px;
+  height: auto;
+}
+.h1924-img {
+  position: absolute;
+  top: 1400px;
+  left: 640px;
+  width: 300px;
+  height: auto;
+}
+.h1925-img {
+  position: absolute;
+  top: 1400px;
+  left: 320px;
+  width: 300px;
+  height: auto;
+}
+.h1927-img {
+  position: absolute;
+  top: 1400px;
+  left: 0px;
+  width: 300px;
+  height: auto;
+}
+.h1933-img {
+  position: absolute;
+  top: 1800px;
+  left: 0px;
+  width: 300px;
+  height: auto;
+}
+.h1947-img {
+  position: absolute;
+  top: 1800px;
+  left: 320px;
+  width: 300px;
+  height: auto;
+}
+
+.h1950-img {
+  position: absolute;
+  top: 1800px;
+  left: 640px;
+  width: 300px;
+  height: auto;
+}
+.h2001-img {
+  position: absolute;
+  top:1800px;
+  left: 960px;
+  width: 300px;
+  height: auto;
+}
+.hActualidad-img {
+  position: absolute;
+  top: 2200px;
+  left: 960px;
+  width: 300px;
+  height: auto;
+}
+
+.mañana-img {
+  position: absolute;
+  top: 2000px;
+  left: 490px;
+  width: 300px;
+  height: auto;
+}
+.mañanatexto-img {
+  position: absolute;
+  top: 2150px;
+  left: 430px;
+  width: 400px;
+  height: auto;
+}
+.ruedas-img {
+  position: absolute;
+  top: 300px;
+  left: 0px;
+  width: 300px;
+  height: auto;
+}
+
+.banderas-img {
+  position: absolute;
+  top: 300px;
+  left: 0px;
+  width: 300px;
+  height: auto;
+}
+.semaforos-img {
+  position: absolute;
+  top: 300px;
+  left: 0px;
+  width: 300px;
+  height: auto;
+}
+.drs-img {
+  position: absolute;
+  top: 300px;
+  left: 0px;
+  width: 300px;
+  height: auto;
+}
+.pistarecta-img {
+  position: absolute;
+  top: 300px;
+  left: 0px;
+  width: 300px;
+  height: auto;
+}
+.pistacurva-img {
+  position: absolute;
+  top: 300px;
+  left: 0px;
+  width: 300px;
+  height: auto;
+}
+.carro1-img {
+  position: absolute;
+  top: 300px;
+  left: 0px;
+  width: 300px;
+  height: auto;
+}.carro2-img {
+  position: absolute;
+  top: 300px;
+  left: 0px;
+  width: 300px;
+  height: auto;
+}
+.pits-img {
+  position: absolute;
+  top: 300px;
+  left: 0px;
+  width: 300px;
+  height: auto;
+}
+.queesti-img {
+  position: absolute;
+  top: 100px;
+  right: 650px;
+  width: 900px;
+  height: auto;
+}
+
+.queestexto-img {
+  position: absolute;
+  top: 120px;
+  left: 200px;
+  width: 600px;
+  height: auto;
+}
+.queesimg-img {
+  position: absolute;
+  top: 140px;
+  left: 640px;
+  width: 590px;
+  height: 400px;
+}
+.htexto-img {
+  position: absolute;
+  top: 580px;
+  left: 20px;
+  width: 500px;
+  height: auto;
+}
+.color {
+  background: linear-gradient(to right, #ef1212, #bd0a0a, #510505);
+}
+.div {
+  max-height: 100vh; /* usa el alto de la pantalla */
+  overflow-y: scroll; /* Forzar barra vertical */
+  scrollbar-width: thin; /* opcional, estiliza */
+  scrollbar-color: #a80e0e #5a0303;
+}
+
+.texton-img {
+  position: absolute;
+  top: 120px;
+  left: 300px;
+  width: 400px;
+  height: auto;
+}
+.celu-img {
+  position: absolute;
+  top: 120px;
+  left: 650px;
+  width: 350px;
+  height: auto;
+}
+.n1no-img {
+  position: absolute;
+  top: 350px;
+  left: 100px;
+  width: 500px;
+  height: auto;
+}
+.n2no-img {
+  position: absolute;
+  top: 350px;
+  left: 700px;
+  width: 500px;
+  height: auto;
+}
+.n3no-img {
+  position: absolute;
+  top: 610px;
+  left: 100px;
+  width: 500px;
+  height: auto;
+}
+.n4no-img {
+  position: absolute;
+  top: 610px;
+  left: 700px;
+  width: 500px;
+  height: auto;
+}
+.n1-img {
+  position: absolute;
+  top: 960px;
+  left: 50px;
+  width: 400px;
+  height: auto;
+}
+.n2-img {
+  position: absolute;
+  top: 960px;
+  left: 430px;
+  width: 400px;
+  height: auto;
+}
+.n3-img {
+  position: absolute;
+  top: 960px;
+  left: 810px;
+  width: 400px;
+  height: auto;
+}
+.n4-img {
+  position: absolute;
+  top: 1350px;
+  left: 50px;
+  width: 400px;
+  height: auto;
+}
+.n5-img {
+  position: absolute;
+  top: 1350px;
+  left: 430px;
+  width: 400px;
+  height: auto;
+}
+.n6-img {
+  position: absolute;
+  top: 1350px;
+  left: 810px;
+  width: 400px;
+  height: auto;
+}
+.caletex-img {
+  position: absolute;
+  top: 80px;
+  left: 300px;
+  width: 400px;
+  height: auto;
+}
+.caleimg-img {
+  position: absolute;
+  top: 120px;
+  left: 650px;
+  width: 400px;
+  height: auto;
+}
+.fo1-img {
+  position: absolute;
+  top: 470px;
+  left: 20px;
+  width: 400px;
+  height: auto;
+}
+.t1-img {
+  position: absolute;
+  top: 420px;
+  left: 450px;
+  width: 400px;
+  height: auto;
+}
+.fo2-img {
+  position: absolute;
+  top: 780px;
+  left: 450px;
+  width: 400px;
+  height: auto;
+}
+.t2-img {
+  position: absolute;
+  top: 720px;
+  left: 20px;
+  width: 400px;
+  height: auto;
+}
+.fo3-img {
+  position: absolute;
+  top: 1090px;
+  left: 20px;
+  width: 400px;
+  height: auto;
+}
+.t3-img {
+  position: absolute;
+  top: 1020px;
+  left: 450px;
+  width: 400px;
+  height: auto;
+}
+.fo4-img {
+  position: absolute;
+  top: 1391px;
+  left: 450px;
+  width: 400px;
+  height: auto;
+}.t4-img {
+  position: absolute;
+  top: 1340px;
+  left: 20px;
+  width: 400px;
+  height: auto;
+}
+.fo5-img {
+  position: absolute;
+  top: 1701px;
+  left: 20px;
+  width: 400px;
+  height: auto;
+}
+.t5-img {
+  position: absolute;
+  top: 1660px;
+  left: 450px;
+  width: 400px;
+  height: auto;
+}
+.fo6-img {
+  position: absolute;
+  top: 2011px;
+  left: 450px;
+  width: 400px;
+  height: auto;
+}
+.t6-img {
+  position: absolute;
+  top: 1960px;
+  left: 20px;
+  width: 400px;
+  height: auto;
+}
+.fo7-img {
+  position: absolute;
+  top: 2321px;
+  left: 20px;
+  width: 400px;
+  height: auto;
+}.t7-img {
+  position: absolute;
+  top: 2260px;
+  left: 450px;
+  width: 400px;
+  height: auto;
+}
+.fo8-img {
+  position: absolute;
+  top: 2631px;
+  left: 450px;
+  width: 400px;
+  height: auto;
+}
+.t8-img {
+  position: absolute;
+  top: 2560px;
+  left: 20px;
+  width: 400px;
+  height: auto;
+}
+.fo9-img {
+  position: absolute;
+  top: 2941px;
+  left: 20px;
+  width: 400px;
+  height: auto;
+}.t9-img {
+  position: absolute;
+  top: 2880px;
+  left: 450px;
+  width: 400px;
+  height: auto;
+}
+.fo10-img {
+  position: absolute;
+  top: 3251px;
+  left: 450px;
+  width: 400px;
+  height: auto;
+}
+.t10-img {
+  position: absolute;
+  top: 3180px;
+  left: 20px;
+  width: 400px;
+  height: auto;
+}
+.fo11-img {
+  position: absolute;
+  top: 3561px;
+  left: 20px;
+  width: 400px;
+  height: auto;
+}.t11-img {
+  position: absolute;
+  top: 3480px;
+  left: 450px;
+  width: 400px;
+  height: auto;
+}
+.fo12-img {
+  position: absolute;
+  top: 3871px;
+  left: 450px;
+  width: 400px;
+  height: auto;
+}.t12-img {
+  position: absolute;
+  top: 3800px;
+  left: 20px;
+  width: 400px;
+  height: auto;
+}
+.fo13-img {
+  position: absolute;
+  top: 4180px;
+  left: 20px;
+  width: 400px;
+  height: auto;
+}.t13-img {
+  position: absolute;
+  top: 4120px;
+  left: 450px;
+  width: 400px;
+  height: auto;
+}
+.fo14-img {
+  position: absolute;
+  top: 4490px;
+  left: 450px;
+  width: 400px;
+  height: auto;
+}
+.t14-img {
+  position: absolute;
+  top: 4420px;
+  left: 20px;
+  width: 400px;
+  height: auto;
+}
+.fo15-img {
+  position: absolute;
+  top: 4800px;
+  left: 20px;
+  width: 400px;
+  height: auto;
+}.t15-img {
+  position: absolute;
+  top: 4740px;
+  left: 450px;
+  width: 400px;
+  height: auto;
+}
+.fo16-img {
+  position: absolute;
+  top: 5110px;
+  left: 450px;
+  width: 400px;
+  height: auto;
+}.t16-img {
+  position: absolute;
+  top: 5040px;
+  left: 20px;
+  width: 400px;
+  height: auto;
+}
+.fo17-img {
+  position: absolute;
+  top: 5420px;
+  left: 20px;
+  width: 400px;
+  height: auto;
+}
+.t17-img {
+  position: absolute;
+  top: 5360px;
+  left: 450px;
+  width: 400px;
+  height: auto;
+}
+.fo18-img {
+  position: absolute;
+  top: 5730px;
+  left: 450px;
+  width: 400px;
+  height: auto;
+}
+.t18-img {
+  position: absolute;
+  top: 5660px;
+  left: 20px;
+  width: 400px;
+  height: auto;
+}
+.fo19-img {
+  position: absolute;
+  top: 6040px;
+  left: 20px;
+  width: 400px;
+  height: auto;
+}
+.t19-img {
+  position: absolute;
+  top: 5980px;
+  left: 450px;
+  width: 400px;
+  height: auto;
+}
+.fo20-img {
+  position: absolute;
+  top: 6350px;
+  left: 450px;
+  width: 400px;
+  height: auto;
+}
+.t20-img {
+  position: absolute;
+  top: 6280px;
+  left: 20px;
+  width: 400px;
+  height: auto;
+}
+.fo21-img {
+  position: absolute;
+  top: 6660px;
+  left: 20px;
+  width: 400px;
+  height: auto;
+}
+.t21-img {
+  position: absolute;
+  top: 6600px;
+  left: 450px;
+  width: 400px;
+  height: auto;
+}
+.fo22-img {
+  position: absolute;
+  top: 6970px;
+  left: 450px;
+  width: 400px;
+  height: auto;
+}
+.t22-img {
+  position: absolute;
+  top: 6900px;
+  left: 20px;
+  width: 400px;
+  height: auto;
+}
+.fo23-img {
+  position: absolute;
+  top: 7280px;
+  left: 20px;
+  width: 400px;
+  height: auto;
+}
+.t23-img {
+  position: absolute;
+  top: 7220px;
+  left: 450px;
+  width: 400px;
+  height: auto;
+}
+.fo24-img {
+  position: absolute;
+  top: 7590px;
+  left: 450px;
+  width: 400px;
+  height: auto;
+}
+.t24-img {
+  position: absolute;
+  top: 7520px;
+  left: 20px;
+  width: 400px;
+  height: auto;
+}
+
+.textotri-img {
+  position: absolute;
+  top: 60px;
+  left: 400px;
+  width: 500px;
+  height: auto;
+}
+.game-img {
+  position: absolute;
+  top: 320px;
+  left: 100px;
+  width: 400px;
+  height: auto;
+}
+.triv-img {
+  position: absolute;
+  top: 320px;
+  left: 800px;
+  width: 400px;
+  height: auto;
+}
+.panel1-img {
+  position: absolute;
+  top: 630px;
+  left: 0px;
+  width: 600px;
+  height: 300px;
+}
+.panel2-img {
+  position: absolute;
+  top: 630px;
+  left: 700px;
+  width: 600px;
+  height: 300px;
+}
+.trivias-f1{
+  position: absolute;
+  top: 700px;
+  left: 800px;
+  width: 300px;
+  height: auto;
+}
+.juegos-f1{
+  position: absolute;
+  top: 700px;
+  left: 120px;
+  width: 400px;
+  height: auto;
+}
+a {
+  color: #000000; 
+  text-decoration: none; 
+}
+
+a:hover {
+  color: #eeff00;
+}
+.ti1-img{
+  position: absolute;
+  top: 100px;
+  left: 200px;
+  width: 300px;
+  height: auto;
+}
+.ti2-img{
+  position: absolute;
+  top: 100px;
+  left: 800px;
+  width: 300px;
+  height: auto;
+}
+.k1-img{
+  position: absolute;
+  top: 240px;
+  left: 60px;
+  width: 500px;
+  height: auto;
+}
+.k2-img{
+  position: absolute;
+  top: 500px;
+  left: 60px;
+  width: 500px;
+  height: auto;
+}
+.k3-img{
+  position: absolute;
+  top: 760px;
+  left: 60px;
+  width: 500px;
+  height: auto;
+}
+.k4-img{
+  position: absolute;
+  top: 1020px;
+  left: 60px;
+  width: 500px;
+  height: auto;
+}
+.k5-img{
+  position: absolute;
+  top: 1280px;
+  left: 60px;
+  width: 500px;
+  height: auto;
+}
+.m1-img{
+  position: absolute;
+  top: 240px;
+  left: 750px;
+  width: 500px;
+  height: auto;
+}
+.m2-img{
+  position: absolute;
+  top: 500px;
+  left: 750px;
+  width: 500px;
+  height: auto;
+}
+.m3-img{
+  position: absolute;
+  top: 760px;
+  left: 750px;
+  width: 500px;
+  height: auto;
+}
+.m4-img{
+  position: absolute;
+  top: 1020px;
+  left: 750px;
+  width: 500px;
+  height: auto;
+}
+.m5-img{
+  position: absolute;
+  top: 1280px;
+  left: 750px;
+  width: 500px;
+  height: auto;
+}
+.tata3-img{
+  position: absolute;
+  top: 1520px;
+  left: 0px;
+  width: 500px;
+  height: auto;
+}
+.tabla-img{
+  position: absolute;
+  top: 1800px;
+  left: 500px;
+  width: 300px;
+  height: auto;
+}
+.piloto-img{
+  position: absolute;
+  top: 1870px;
+  left: 380px;
+  width: 300px;
+  height: auto;
+}
+.tiempo-img{
+  position: absolute;
+  top: 2120px;
+  left: 690px;
+  width: 300px;
+  height: auto;
+}
+.neumaticos-img{
+  position: absolute;
+  top: 1800px;
+  left: 748px;
+  width: 300px;
+  height: auto;
+}
+.laps-img{
+  position: absolute;
+  top: 1700px;
+  left: 400px;
+  width: 300px;
+  height: auto;
+}
+.gap-img{
+  position: absolute;
+  top: 2150px;
+  left: 470px;
+  width: 300px;
+  height: auto;
+}
+.escuderia-img{
+  position: absolute;
+  top: 2030px;
+  left: 330px;
+  width: 300px;
+  height: auto;
+}
+.titu1-img{
+  position: absolute;
+  top: 50px;
+  left: 450px;
+  width: 500px;
+  height: auto;
+}
+.es1-img{
+  position: absolute;
+  top: 450px;
+  left: 200px;
+  width: 400px;
+  height: auto;
+}
+.li1-img{
+  position: absolute;
+  top: 795px;
+  left: 310px;
+}
+.es2-img{
+  position: absolute;
+  top: 450px;
+  left: 700px;
+  width: 400px;
+  height: auto;
+}
+.li2-img{
+  position: absolute;
+  top: 795px;
+  left: 810px;
+}
+.es3-img{
+  position: absolute;
+  top: 880px;
+  left: 200px;
+  width: 400px;
+  height: auto;
+}
+.li3-img{
+  position: absolute;
+  top: 1225px;
+  left: 310px;
+}
+.es4-img{
+  position: absolute;
+  top: 880px;
+  left: 700px;
+  width: 400px;
+  height: auto;
+}
+.li4-img{
+  position: absolute;
+  top: 1225px;
+  left: 810px;
+}
+.es5-img{
+  position: absolute;
+  top: 1300px;
+  left: 450px;
+  width: 400px;
+  height: auto;
+}
+.li5-img{
+  position: absolute;
+  top: 1650px;
+  left: 570px;
+}
+.titu2-img{
+  position: absolute;
+  top: 1600px;
+  left: 20px;
+  width: 500px;
+  height: auto;
+}
+.pl1-img {
+  position: absolute;
+  top: 1950px;
+  left: 150px;
+  width: 500px;
+  height: auto;
+}
+.li6-img {
+  position: absolute;
+  top: 2320px;
+  left: 280px;
+}
+.pl2-img {
+  position: absolute;
+  top: 1950px;
+  left: 650px;
+  width: 500px;
+  height: auto;
+}
+.li7-img {
+  position: absolute;
+  top: 2320px;
+  left: 780px;
+}
+.pl3-img {
+  position: absolute;
+  top: 2400px;
+  left: 410px;
+  width: 500px;
+  height: auto;
+}
+.li8-img{
+  position: absolute;
+  top: 2775px;
+  left: 550px;
+}
+

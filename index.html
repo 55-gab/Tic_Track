@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic Track - Inicio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div id="inicio" class="seccion inicio-container active">
+    <img src="FondoPaginaInicio/titulo.png" alt="Título" class="titulo-img">
+    <div class="contenedor">
+      <div class="texto-box">
+        <img src="FondoPaginaInicio/cuadro de texto.png" alt="texto-box" class="texto-box">
+        <div class="texto-contenido">
+          <h1>¡Arranca motores con TicTrack!<br></h1>
+          <p>Explora lo esencial de la F1 y vive este deporte como nunca antes. 🚦</p>
+          <p>¡Tu pista empieza aquí!</p>
+        </div>
+      </div>
+
+      <!-- BOTÓN START: al hacer clic abre el "menu" (segunda-seccion) -->
+      <img src="FondoPaginaInicio/boton.png" alt="Botón Start" class="boton-img btn" data-target="menu">
+    </div>
+    <img src="FondoPaginaInicio/carros1.png" alt="Carros1" class="carros1-img">
+  </div>
+<script>
+  // Crear el sonido
+  const sonido = new Audio('FondoPaginaInicio/beep_beep_bip.mp3');
+  
+
+
+  // Seleccionar el botón y contenedores
+  const boton = document.querySelector('.boton-img');
+  const pantalla1 = document.querySelector('.inicio-container')
+  const pantalla2 = document.querySelector('.segunda-seccion');
+
+boton.addEventListener('click', () => {
+    // Reproducir sonido
+    sonido.play();
+
+    // Cuando termine el sonido -> aplicar fade-out y mostrar segunda pantalla
+    sonido.addEventListener('ended', () => {
+        pantalla1.classList.add('fade-out'); // Aplicar fade-out
+    });
+
+    // Después del tiempo del audio, mostrar la segunda sección y esconder la primera
+    setTimeout(() => {
+        pantalla1.style.display = 'none';   // Esconder la pantalla 1
+        pantalla2.style.display = 'block';  // Mostrar la pantalla 2
+    }, (sonido.duration * 1000) + 1000);; // Tiempo del fade basado en la duración del audio
+});
+</script>
+
+  <!-- ------------------------
+       SECCIÓN: MENÚ (segunda pantalla tipo "menu")
+       ------------------------ -->
+  <div id="menu" class="seccion segunda-seccion">
+    <!-- elementos visuales -->
+    <img src="pagina2/bandera.png" alt="bandera s2" class="bandera-img">
+    <img src="pagina2/bandera.png" alt="bandera s2" class="bandera1-img">
+    <img src="pagina2/bandera.png" alt="bandera s2" class="bandera2-img">
+    <img src="pagina2/pista.png" alt="pista 1" class="pista-img">
+    <img src="pagina2/pista.png" alt="pista 2" class="pista2-img">
+    <img src="pagina2/pista.png" alt="pista 3" class="pista3-img">
+    <img src="pagina2/carrow.png" alt="carrow s2" class="carrow-img">
+    <img src="pagina2/carroS.png" alt="carroS s2" class="carroS-img">
+    <img src="pagina2/estrella.png" alt="estrella 1" class="estrella-img">
+    <img src="pagina2/estrella.png" alt="estrella 2" class="estrella2-img">
+    <img src="pagina2/ruedaamarilla.png" alt="ruedaamarilla s2" class="ruedaamarilla-img">
+    <img src="pagina2/ruedablanca.png" alt="ruedablanca s2" class="ruedablanca-img">
+    <img src="pagina2/titulo2.png" alt="Título s2" class="titulo2-img">
+
+    <!-- BOTONES DEL MENU: cada imagen tiene data-target -> abre sección -->
+    <img src="pagina2/queesboton.png" alt="queesboton s2" class="queesboton-img btn" data-target="seccion-quees">
+    <img src="pagina2/calendarioboton.png" alt="calendarioboton s2" class="calendarioboton-img btn" data-target="seccion-calendario">
+    <img src="pagina2/noticiasboton.png" alt="noticiasboton s2" class="noticiasboton-img btn" data-target="seccion-noticias">
+    <img src="pagina2/terminosboton.png" alt="terminosboton s2" class="terminosboton-img btn" data-target="seccion-terminos">
+    <img src="pagina2/triviaboton.png" alt="triviaboton s2" class="triviaboton-img btn" data-target="seccion-trivia">
+    <img src="pagina2/comoentrarboton.png" alt="comoentrarboton s2" class="comoentrarboton-img btn" data-target="seccion-comoentrar">
+  </div>
+
+  <!-- ¿Qué es la F1? -->
+  <div id="seccion-quees" class="seccion color div">
+    <div class="contenido-seccion">
+      <header>
+        <h2>¿Qué es la Fórmula 1?</h2>
+        <img src="pagina2/volver.png" alt="Volver" class="volver-btn btn" data-target="menu">
+      </header>
+      <img src="quees-seccion/queesti.png" alt="titulo" class="queesti-img">  
+      <img src="quees-seccion/imgquees.png" alt="img" class="queesimg-img ">
+      <img src="quees-seccion/queestexto.png" alt="texto" class="queestexto-img">
+      <img src="quees-seccion/historiatexto.png" alt="textoh" class="htexto-img">
+      <img src="quees-seccion/1884.png" alt="historia" class="h1884-img">
+      <img src="quees-seccion/1900.png" alt="historia" class="h1900-img">
+      <img src="quees-seccion/1901.png" alt="historia" class="h1901-img">
+      <img src="quees-seccion/1904.png" alt="historia" class="h1904-img">
+      <img src="quees-seccion/1906.png" alt="historia" class="h1906-img">
+      <img src="quees-seccion/1924.png" alt="historia" class="h1924-img">
+      <img src="quees-seccion/1925.png" alt="historia" class="h1925-img">
+      <img src="quees-seccion/1927.png" alt="historia" class="h1927-img">
+      <img src="quees-seccion/1933.png" alt="historia" class="h1933-img">
+      <img src="quees-seccion/1947.png" alt="historia" class="h1947-img">
+      <img src="quees-seccion/1950.png" alt="historia" class="h1950-img">
+      <img src="quees-seccion/2001.png" alt="historia" class="h2001-img">
+      <img src="quees-seccion/actualidad.png" alt="historia" class="hActualidad-img">
+      <img src="quees-seccion/mañana.png" alt="historia" class="mañana-img">
+      <img src="quees-seccion/mañanatexto.png" alt="historia" class="mañanatexto-img">
+
+    </div>
+  </div>
+
+  <!-- Escuderías -->
+  <div id="seccion-escuderias" class="seccion color ">
+    <div class="contenido-seccion">
+      <header>
+        <h2>Escuderías</h2>
+        <img src="pagina2/volver.png" alt="Volver" class="volver-btn btn" data-target="menu">
+      </header>
+    </div>
+  </div>
+
+  <!-- Calendario -->
+  <div id="seccion-calendario" class="seccion color div">
+    <div class="contenido-seccion">
+      <header>
+      <h2>Calendario</h2>
+      <img src="pagina2/volver.png" alt="Volver" class="volver-btn btn" data-target="menu">
+      </header>
+      <img src="calendario_sec/caletexto.png" alt="historia" class="caletex-img">
+      <img src="calendario_sec/imgcale.png" alt="historia" class="caleimg-img">
+      <img src="calendario_sec/fo1.png" alt="historia" class="fo1-img">
+      <img src="calendario_sec/t1.png" alt="historia" class="t1-img">
+      <img src="calendario_sec/fo2.png" alt="historia" class="fo2-img">
+      <img src="calendario_sec/t2.png" alt="historia" class="t2-img">
+      <img src="calendario_sec/fo3.png" alt="historia" class="fo3-img">
+      <img src="calendario_sec/t3.png" alt="historia" class="t3-img">
+      <img src="calendario_sec/fo4.png" alt="historia" class="fo4-img">
+      <img src="calendario_sec/t4.png" alt="historia" class="t4-img">
+      <img src="calendario_sec/fo5.png" alt="historia" class="fo5-img">
+      <img src="calendario_sec/t5.png" alt="historia" class="t5-img">
+      <img src="calendario_sec/fo6.png" alt="historia" class="fo6-img">
+      <img src="calendario_sec/t6.png" alt="historia" class="t6-img">
+      <img src="calendario_sec/fo7.png" alt="historia" class="fo7-img">
+      <img src="calendario_sec/t7.png" alt="historia" class="t7-img">
+      <img src="calendario_sec/fo8.png" alt="historia" class="fo8-img">
+      <img src="calendario_sec/t8.png" alt="historia" class="t8-img">
+      <img src="calendario_sec/fo9.png" alt="historia" class="fo9-img">
+      <img src="calendario_sec/t9.png" alt="historia" class="t9-img">
+      <img src="calendario_sec/fo10.png" alt="historia" class="fo10-img">
+      <img src="calendario_sec/t10.png" alt="historia" class="t10-img">
+      <img src="calendario_sec/fo11.png" alt="historia" class="fo11-img">
+      <img src="calendario_sec/t11.png" alt="historia" class="t11-img">
+      <img src="calendario_sec/fo12.png" alt="historia" class="fo12-img">
+      <img src="calendario_sec/t12.png" alt="historia" class="t12-img">
+      <img src="calendario_sec/fo13.png" alt="historia" class="fo13-img">
+      <img src="calendario_sec/t13.png" alt="historia" class="t13-img">
+      <img src="calendario_sec/fo14.png" alt="historia" class="fo14-img">
+      <img src="calendario_sec/t14.png" alt="historia" class="t14-img">
+      <img src="calendario_sec/fo15.png" alt="historia" class="fo15-img">
+      <img src="calendario_sec/t15.png" alt="historia" class="t15-img">
+      <img src="calendario_sec/fo16.png" alt="historia" class="fo16-img">
+      <img src="calendario_sec/t16.png" alt="historia" class="t16-img">
+      <img src="calendario_sec/fo17.png" alt="historia" class="fo17-img">
+      <img src="calendario_sec/t17.png" alt="historia" class="t17-img">
+      <img src="calendario_sec/fo18.png" alt="historia" class="fo18-img">
+      <img src="calendario_sec/t18.png" alt="historia" class="t18-img">
+      <img src="calendario_sec/fo19.png" alt="historia" class="fo19-img">
+      <img src="calendario_sec/t19.png" alt="historia" class="t19-img">
+      <img src="calendario_sec/fo20.png" alt="historia" class="fo20-img">
+      <img src="calendario_sec/t20.png" alt="historia" class="t20-img">
+      <img src="calendario_sec/fo21.png" alt="historia" class="fo21-img">
+      <img src="calendario_sec/t21.png" alt="historia" class="t21-img">
+      <img src="calendario_sec/fo22.png" alt="historia" class="fo22-img">
+      <img src="calendario_sec/t22.png" alt="historia" class="t22-img">
+      <img src="calendario_sec/fo23.png" alt="historia" class="fo23-img">
+      <img src="calendario_sec/t23.png" alt="historia" class="t23-img">
+      <img src="calendario_sec/fo24.png" alt="historia" class="fo24-img">
+      <img src="calendario_sec/t24.png" alt="historia" class="t24-img">
+    </div>
+  </div>
+
+  <!-- Noticias -->
+  <div id="seccion-noticias" class="seccion color div">
+    <div class="contenido-seccion">
+      <header>
+        <h2>Noticias</h2>     
+        <img src="pagina2/volver.png" alt="Volver" class="volver-btn btn" data-target="menu">
+      </header>
+      <img src="noticias_sec/texton.png" alt="historia" class="texton-img">
+      <img src="noticias_sec/celu.png" alt="historia" class="celu-img">
+      <img src="noticias_sec/1no.png" alt="historia" class="n1no-img">
+      <img src="noticias_sec/2no.png" alt="historia" class="n2no-img">
+      <img src="noticias_sec/3no.png" alt="historia" class="n3no-img">
+      <img src="noticias_sec/4no.png" alt="historia" class="n4no-img">
+      <img src="noticias_sec/n1.png" alt="historia" class="n1-img">
+      <img src="noticias_sec/n2.png" alt="historia" class="n2-img">
+      <img src="noticias_sec/n3.png" alt="historia" class="n3-img">
+      <img src="noticias_sec/n4.png" alt="historia" class="n4-img">
+      <img src="noticias_sec/n4.png" alt="historia" class="n4-img">
+      <img src="noticias_sec/n5.png" alt="historia" class="n5-img">
+      <img src="noticias_sec/n6.png" alt="historia" class="n6-img">
+
+
+    </div>
+  </div>
+
+  <!-- Términos / Conceptos -->
+  <div id="seccion-terminos" class="seccion color div">
+    <div class="contenido-seccion">
+      <header>
+        <h2>Términos y conceptos</h2>
+        <img src="pagina2/volver.png" alt="Volver" class="volver-btn btn" data-target="menu">
+      </header>
+      <img src="terminos_sec/ti1.png" alt="historia" class="ti1-img">
+      <img src="terminos_sec/ti2.png" alt="historia" class="ti2-img">
+      <img src="terminos_sec/sam.png" alt="historia" class="k1-img">
+      <img src="terminos_sec/pam.png" alt="historia" class="k2-img">
+      <img src="terminos_sec/pim.png" alt="historia" class="k3-img">
+      <img src="terminos_sec/pom.png" alt="historia" class="k4-img">
+      <img src="terminos_sec/drm.png" alt="historia" class="k5-img">
+      <img src="terminos_sec/vok.png" alt="historia" class="m1-img">
+      <img src="terminos_sec/alk.png" alt="historia" class="m2-img">
+      <img src="terminos_sec/nek.png" alt="historia" class="m3-img">
+      <img src="terminos_sec/hak.png" alt="historia" class="m4-img">
+      <img src="terminos_sec/pik.png" alt="historia" class="m5-img">
+      <img src="terminos_sec/tabla.jpg" alt="historia" class="tabla-img">
+      <img src="terminos_sec/ti3.png" alt="historia" class="tata3-img">
+      <img src="terminos_sec/pilo.png" alt="historia" class="piloto-img">
+      <img src="terminos_sec/gap.png" alt="historia" class="gap-img">
+      <img src="terminos_sec/meu.png" alt="historia" class="neumaticos-img">
+      <img src="terminos_sec/lap.png" alt="historia" class="laps-img">
+      <img src="terminos_sec/tiem.png" alt="historia" class="tiempo-img">
+      <img src="terminos_sec/escu.png" alt="historia" class="escuderia-img">
+
+      
+    </div>
+  </div>
+
+  <!-- Trivia -->
+  <div id="seccion-trivia" class="seccion color div">
+    <div class="contenido-seccion">
+      <header>
+        <h2>Trivia</h2>
+        <img src="pagina2/volver.png" alt="Volver" class="volver-btn btn" data-target="menu">
+      </header>
+      <img src="trivia_sec/texto_tri.png" alt="historia" class="textotri-img">
+      <img src="trivia_sec/games.png" alt="historia" class="game-img">
+      <img src="trivia_sec/triv.png" alt="historia" class="triv-img">
+      <img src="trivia_sec/panel.png" alt="historia" class="panel1-img">
+      <img src="trivia_sec/panel.png" alt="historia" class="panel2-img">
+      <ul class="trivias-f1">
+        <li><a href="https://wordwall.net/es/resource/4878081/formula-1-quiz?utm_source=chatgpt.com">Quiz de F1 - Wordwall</a></li>
+        <li><a href="https://www.educaplay.com/learning-resources/8806296-preguntas_sobre_la_formula_1.html?utm_source=chatgpt.com">Preguntas sobre la Fórmula 1 - Educaplay</a></li>
+        <li><a href="https://www.jetpunk.com/tags/formula-one?utm_source=chatgpt.com" >Quizzes de Formula One - JetPunk</a></li>
+        <li><a href="https://www.quiz-maker.com/cp-aict-formula-1-grand-prix-trivia-quiz?utm_source=chatgpt.com" >Formula 1 Grand Prix Trivia - Quiz-Maker</a></li>
+        <li><a href="https://triviacreator.com/categories/formula-1?utm_source=chatgpt.com" >Formula 1 Trivia - TriviaCreator</a></li>
+      </ul>
+      <ul class="juegos-f1">
+        <li><a href="https://play.google.com/store/apps/details?hl=es_US&id=com.hutchgames.formularacing&utm_source=chatgpt.com" >F1® Clash (Android) - Google Play</a></li>
+        <li><a href="https://f1-mobile-racing.en.softonic.com/android?utm_source=chatgpt.com" >F1 Mobile Racing - Softonic</a></li>
+        <li><a href="https://www.minijuegos.com/juegos-de-formula-1?utm_source=chatgpt.com" >Minijuegos - Juegos de Fórmula 1</a></li>
+        <li><a href="https://es.wikipedia.org/wiki/Real_Racing_3?utm_source=chatgpt.com" >Real Racing 3 (info) - Wikipedia</a></li>
+        <li><a href="https://blog.masmovil.es/mejores-juegos-de-formula-1-para-android/?utm_source=chatgpt.com" >Monoposto y más - Lista en blog</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Cómo entrar / practicar -->
+  <div id="seccion-comoentrar" class="seccion color div">
+    <div class="contenido-seccion">
+      <header>
+        <h2>¿Cómo entrar o dónde practicar?</h2>
+        <img src="pagina2/volver.png" alt="Volver" class="volver-btn btn" data-target="menu">
+      </header>
+      <img src="comoentrar_sec/ti1.png" alt="historia" class="titu1-img">
+      <img src="comoentrar_sec/es1.png" alt="historia" class="es1-img">
+      <a href="https://www.escueladekarts.com/" class="li1-img">Aqui!</a>
+      <img src="comoentrar_sec/es2.png" alt="historia" class="es2-img">
+      <a href="https://rokcupcolombia.co/rokker-karting-academy/" class="li2-img">Aqui!</a>
+      <img src="comoentrar_sec/es3.png" alt="historia" class="es3-img">
+      <a href="https://autodromodetocancipa.com/acercadekart/" class="li3-img">Aqui!</a>
+      <img src="comoentrar_sec/es5.png" alt="historia" class="es4-img">
+      <a href="https://www.deportesacc.com.co/" class="li4-img">Aqui!</a>
+      <img src="comoentrar_sec/es4.png" alt="historia" class="es5-img">
+      <a href="https://www.facebook.com/kartodromoLagunaViva/" class="li5-img">Aqui!</a>
+      <img src="comoentrar_sec/ti2.png" alt="historia" class="titu2-img">
+      <img src="comoentrar_sec/pl1.png" alt="historia" class="pl1-img">
+      <a href="https://www.instagram.com/superkartsco/" class="li6-img">Aqui!</a>
+      <img src="comoentrar_sec/pl2.png" alt="historia" class="pl2-img">
+      <a href="https://www.instagram.com/xtremekarts.co/" class="li7-img">Aqui!</a>
+      <img src="comoentrar_sec/pl3.png" alt="historia" class="pl3-img">
+      <a href="https://www.instagram.com/gokartsbarranquilla/?hl=es-la" class="li8-img">Aqui!</a>
+      
+    </div>
+  </div>
+
+  <!-- ELEMENTO VISUAL PARA EFECTO GLITCH (se controla desde JS) -->
+  <div id="glitch-overlay" aria-hidden="true"></div>
+
+  <!-- =========================
+       SCRIPT: navegación + glitch
+       ========================= -->
+  <script>
+    (function () {
+      const GLITCH_DURATION = 700; // ms (ajusta si quieres más/menos)
+      const btns = document.querySelectorAll('.btn[data-target]');
+      const sections = document.querySelectorAll('.seccion');
+      const overlay = document.getElementById('glitch-overlay');
+
+      function showSection(targetId) {
+        const current = document.querySelector('.seccion.active');
+        const target = document.getElementById(targetId);
+        if (!target || current === target) return;
+
+        // activar efecto glitch
+        overlay.classList.add('glitch-active');
+
+        // pequeña espera para que el glitch "se note"
+        setTimeout(() => {
+          // ocultar la actual y mostrar la nueva
+          current.classList.remove('active');
+          current.style.display = 'none';
+
+          target.style.display = 'block';
+          // forzar reflow para que la animación funcione correctamente
+          void target.offsetWidth;
+          target.classList.add('active');
+
+          // quitar overlay glitch después del tiempo
+          setTimeout(() => {
+            overlay.classList.remove('glitch-active');
+          }, GLITCH_DURATION);
+        }, Math.floor(GLITCH_DURATION / 2));
+      }
+
+      // inicializar display: aseguramos que solo la .active sea visible
+      document.addEventListener('DOMContentLoaded', () => {
+        sections.forEach(sec => {
+          if (!sec.classList.contains('active')) {
+            sec.style.display = 'none';
+          } else {
+            sec.style.display = 'block';
+          }
+        });
+      });
+
+      // listeners en botones
+      btns.forEach(b => {
+        b.addEventListener('click', (e) => {
+          const targetId = b.getAttribute('data-target');
+          showSection(targetId);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
